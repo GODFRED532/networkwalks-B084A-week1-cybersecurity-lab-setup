@@ -7,7 +7,7 @@ This repository documents the cybersecurity lab setup created for Week 1 of the 
 ## Lab Setup Images
 You can include screenshots in this README using Markdown image syntax.
 
-![Cybersecurity lab setup](./set-up-screenshot)
+![Cybersecurity lab setup](./images/lab-setup.png)
 
 ## Setup
 This repository contains the initial configuration and supporting materials for the lab environment. The setup focuses on creating a portable and reusable workspace for cybersecurity practice, with emphasis on safe experimentation and structured learning.
