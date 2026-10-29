@@ -3,7 +3,6 @@ my cybersecurity lab setup
 
 ## Overview
 This repository documents the cybersecurity lab setup created for Week 1 of the B084A coursework. The purpose of this project is to establish a practical environment for learning and experimenting with cybersecurity concepts in a safe and controlled setting.
-
 The lab is designed to support hands-on exploration of network analysis, system security, defensive tools, and basic attack-defense workflows. It serves as a foundation for further exercises and provides a structured record of the configuration and tools used throughout the setup process.
 
 ## Setup
