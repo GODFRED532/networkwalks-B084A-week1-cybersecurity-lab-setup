@@ -113,7 +113,7 @@ DHCP:          Enabled
 
 ### 📸 NAT Network Configuration
 
-![NAT Network Setup](./images/NAT%20Network.png)
+![NAT Network Setup](./setting-up-network%20in%20virtualbox.png)
 
 The expected configuration is:
 
@@ -147,9 +147,9 @@ Disk:        ~80 GB
 
 ### 📸 Kali VM Configuration
 
-![Kali VM Configuration](./images/Kali%20Configs.png)
+![Kali VM Configuration](./VirtualBox_kali-linux-2026.2-virtualbox-amd64.png)
 
-![Kali Desktop](./images/Kali%20Desktop.png)
+![Kali Login Setup](./logins-set-up.png)
 
 ---
 
@@ -283,7 +283,9 @@ The DNS server observed during this setup was:
 
 ## 📸 Network Configuration
 
-![Kali Network Configuration](./images/Check%20Connectivity.png)
+![Network Settings](./network%20setting.png)
+
+![Wired Network Connection](./setting-wired-network-connection1.png)
 
 ---
 
@@ -358,109 +360,6 @@ Expected configuration:
 
 ---
 
-# 04 · 📸 Kali Snapshots
-
-Snapshots provide a recovery point for the virtual machine.
-
-They are especially useful before:
-
-* Installing new security tools
-* Changing network configuration
-* Running lab exercises
-* Testing potentially disruptive configurations
-
----
-
-## 🧼 Create the Baseline Snapshot
-
-After completing the Kali installation and network configuration:
-
-1. Shut down Kali.
-2. Open **Oracle VirtualBox Manager**.
-3. Select the Kali VM.
-4. Open **Snapshots**.
-5. Create a new snapshot.
-
-Use:
-
-```text
-Fresh Installation
-```
-
-Recommended description:
-
-```text
-Clean Kali Linux installation with Lab-Network configured
-and network connectivity verified.
-```
-
-### 📸 Snapshot Configuration
-
-![Kali Snapshot](./images/Lab%20Snapshots.png)
-
-The snapshot tree should look similar to:
-
-```text
-📸 Fresh Installation
-└── ▶ Current State
-```
-
----
-
-## 🔬 Snapshot Strategy
-
-Create snapshots before major changes.
-
-Example:
-
-```text
-📸 Fresh Installation
-       │
-       ├── 📸 Before Tool Installation
-       │
-       ├── 📸 Before Network Testing
-       │
-       └── 📸 Before Lab Exercise
-```
-
-Recommended naming convention:
-
-```text
-Fresh Installation
-Before Tool Installation
-Before Network Configuration
-Before Network Testing
-Before Lab Exercise
-Clean Lab Baseline
-```
-
----
-
-## ♻️ Restore a Snapshot
-
-If something goes wrong during an experiment:
-
-1. Power off the Kali VM.
-2. Open **VirtualBox → Snapshots**.
-3. Select the desired snapshot.
-4. Click **Restore**.
-5. Start Kali again.
-
-```text
-       🧪 Lab Exercise
-              │
-              ▼
-        💥 Something breaks
-              │
-              ▼
-        ♻️ Restore Snapshot
-              │
-              ▼
-       🐉 Clean Kali VM
-```
-
----
-
 # ✅ Final Checklist
 
 ### 🌐 NAT Network
@@ -487,51 +386,19 @@ If something goes wrong during an experiment:
 * [ ] Ping `8.8.8.8`
 * [ ] Test `google.com`
 
-### 📸 Snapshots
-
-* [ ] Shut down Kali
-* [ ] Create `Fresh Installation`
-* [ ] Add snapshot description
-* [ ] Create additional snapshots before major changes
-
 ---
 
-# 🏁 Final Lab State
+# 📸 Lab Setup Images
 
-After completing all four steps, the environment should look like:
+Here are the screenshots used in this setup:
 
-```text
-                         🌐 INTERNET
-                              │
-                              ▼
-                    ┌──────────────────┐
-                    │  HOST MACHINE    │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                    ┌──────────────────┐
-                    │  ORACLE          │
-                    │  VIRTUALBOX      │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                    ┌──────────────────┐
-                    │  Lab-Network     │
-                    │  10.0.0.0/24     │
-                    │  Gateway:        │
-                    │  10.0.0.1        │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                    ┌──────────────────┐
-                    │  🐉 KALI LINUX   │
-                    │  10.0.0.3        │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                    📸 Fresh Installation
-                       Recovery Point
-```
+![VirtualBox Kali Setup](./VirtualBox_kali-linux-2026.2-virtualbox-amd64.png)
+
+![Network Configuration](./network%20setting.png)
+
+![Wired Connection Setup](./setting-wired-network-connection1.png)
+
+![Kali Login Setup](./logins-set-up.png)
 
 ---
 
@@ -550,8 +417,6 @@ Possible additions include:
 * 🔎 Network monitoring tools
 * 🛡️ Defensive security tools
 
-Keep the **Fresh Installation** snapshot as your clean baseline and create additional snapshots as the lab evolves.
-
 ---
 
 # ⚠️ Responsible Use
@@ -564,25 +429,6 @@ This lab is intended for:
 * Personal lab experimentation
 
 > **Only test systems that you own or have explicit permission to assess.**
-
----
-
-# ⭐ Lab Status
-
-```text
-┌────────────────────────────────────────┐
-│          🐉 KALI LAB STATUS            │
-├────────────────────────────────────────┤
-│                                        │
-│  🌐 NAT Network       ✅ Configured    │
-│  🐉 Kali Linux        ✅ Installed     │
-│  🔌 Network           ✅ Verified      │
-│  📸 Snapshot          ✅ Created       │
-│                                        │
-│          🚀 LAB READY                  │
-│                                        │
-└────────────────────────────────────────┘
-```
 
 ---
 
